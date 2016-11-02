@@ -1,0 +1,1352 @@
+@import "bourbon"
+@import "neat"
+$blue: #1b5bbb
+$light-blue: #01a8ec
+$gothambold: "GothamProBold"
+$gothamregular: "GothamProRegular"
+$roboto: "RobotoRegular"
+
+body
+	position: relative
+	line-height: 1.4
+.wrapper
+	width: 960px
+	margin: 0 auto
+.flex
+	display: flex
+.none
+	display: none
+.order
+	background: $light-blue
+	border-radius: 21px
+	box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3), inset 0 -5px 0 rgba(3, 128, 179, 0.78)
+	font-size: 16px
+	font-weight: 400
+	padding: 14px 16px 16px 16px
+	color: #fff
+	font-family: $gothamregular
+	transition: all 0.5s
+	cursor: pointer
+	&:active
+		color: #fff
+		text-decoration: none
+		transition: all 0.5s
+		top: 1px
+		position: relative
+	&:hover, &:focus
+		color: #fff
+		text-decoration: none
+		background: #1194ca
+.question-mark
+	width: 19px
+	height: 19px
+	background: #fff
+	border-radius: 50%
+	display: inline-block
+	color: #000
+	font-size: 13.5px
+	margin-left: 7px
+	font-family: "RobotoRegular"
+	position: relative
+	cursor: pointer
+	.tooltiptext
+		visibility: hidden
+		width: 120px
+		background-color: #fff
+		color: #000
+		text-align: center
+		padding: 5px 0
+		border-radius: 6px
+		position: absolute
+		z-index: 1
+		bottom: -15px
+		left: 27px
+	&:hover .tooltiptext
+		visibility: visible
+	.tooltiptext::after
+		content: " "
+		position: absolute
+		top: 50%
+		right: 100%
+		margin-top: -5px
+		border-width: 5px
+		border-style: solid
+		border-color: transparent #fff transparent transparent
+
+h1
+	font-size: 50px
+	font-family: $gothambold
+h2
+	font-size: 36px
+
+
+header
+	nav
+		background: $blue
+		height: 50px
+		position: fixed
+		width: 100%
+		z-index: 101
+		ul
+			height: 50px
+			justify-content: space-between
+			li
+				margin: auto 0
+				a
+					color: #fff
+					font-family: $roboto
+					font-size: 16px
+					&:active, &:hover, &:focus
+						color: #fff
+						background-color: $light-blue !important
+			.active
+				background: $light-blue
+	div.header
+		background: url('/assets/img/header-bg.png')
+		height: 186px
+		padding: 50px
+		background-position: 50% 100%
+		div.wrapper
+			height: 136px
+			div.logo
+				margin: auto auto auto 0
+				p
+					font-family: $roboto
+					font-size: 16px
+					text-transform: uppercase
+					color: $light-blue
+					margin: 0
+			div.contact
+				margin: auto 0 auto 240px
+				span
+					font-family: $roboto
+					color: $light-blue
+					display: block
+				span.phone 
+					font-size: 30px
+					text-align: right
+				i.icon-mail
+					font-size: 23px
+					position: relative
+					top: 4px
+				span.email
+					font-size: 16px
+					text-align: right
+				i
+					color: #cec9c9
+			div.block-order
+				margin: auto 0 auto auto
+section.slider
+	background: url('/assets/img/slider-bg.png') no-repeat
+	height: 600px
+	margin-top: -45px
+	background-position: 52% 0%
+	position: relative
+	h1
+		font-size: 36px
+		color: $blue
+		padding-top: 90px
+		padding-left: 70px
+		img
+			position: relative
+			top: 7px
+	ul
+		list-style-image: url('/assets/img/circle.png')
+		position: relative
+		padding-left: 70px
+		left: 22px
+		top: 20px
+		li
+			color: $blue
+			font-family: $roboto
+			font-size: 18px
+			padding-left: 5px
+			padding-top: 5px
+			position: relative
+section.consultation
+	background: #fff
+	width: 700px
+	height: 190px
+	margin: auto
+	margin-top: -204px
+	border-radius: 2px
+	position: relative
+	div.wrapper
+		width: 700px
+		height: 190px
+		form
+			flex-direction: column
+			margin: auto
+			h2, p
+				text-align: center
+				font-family: $gothambold
+			h2
+				font-size: 28px
+			p
+				font-size: 14px
+			div.flex
+				width: 580px
+				margin: auto
+				padding: 20px 0
+			input
+				background-color: rgba(255, 255, 255, 0.5)
+				border: 1px solid #999
+				border-radius: 10px
+				margin: auto
+				width: 160px
+				padding: 10px
+			input[type="submit"]
+				background: $light-blue
+				border-radius: 21px
+				box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3), inset 0 -5px 0 rgba(3, 128, 179, 0.78)
+				font-size: 16px
+				font-weight: 400
+				padding: 10px 16px 12px 16px
+				color: #fff
+				font-family: $gothamregular
+				width: 220px
+				&:active
+					color: #fff
+					text-decoration: none
+					transition: all 0.5s
+					top: 1px
+					position: relative
+				&:hover, &:focus
+					color: #fff
+					text-decoration: none
+					background: #1194ca
+section.counter
+	background: url('/assets/img/counter-bg.png') no-repeat
+	height: 450px
+	background-position: 50% 100%
+	margin-top: -78px
+	div.wrapper
+		margin: auto
+		div.block
+			margin: auto
+			flex-direction: column
+			div
+				height: 150px
+				img
+					margin: auto
+			div.description
+				width: 65%
+				margin: auto
+				height: 100%
+				p
+					font-family: $gothambold
+					font-size: 18px
+					text-align: center
+section.introduction
+	padding-bottom: 70px
+	h1 
+		text-align: center
+		padding-top: 60px
+		padding-bottom: 40px
+	div.block
+		width: 319px
+		height: 198px
+		margin: 1px
+		color: #157fd9
+		text-align: center
+		padding-top: 20px
+		padding-left: 100px
+		h2
+			font-size: 24px
+			padding: 30px 0
+		span
+			opacity: 0 
+	div.i-1
+		width: 640px
+		background: url('/assets/img/introduction-1.png') no-repeat
+		div.item
+			margin: 25px 94px 0px auto
+	div.i-2
+		background: url('/assets/img/introduction-2.png') no-repeat
+	div.i-3
+		background: url('/assets/img/introduction-3.png') no-repeat
+	div.i-4
+		background: url('/assets/img/introduction-4.png') no-repeat
+	div.i-5
+		background: url('/assets/img/introduction-5.png') no-repeat
+	.products
+		.h2
+			font-family: $gothambold
+			padding: 70px 0 40px
+			font-size: 24px
+			color: #0380b3
+			text-align: center
+		.row
+			flex-wrap: wrap
+			margin: 0 auto
+			justify-content: space-around
+			.product
+				width: 220px
+				img
+					display: flex
+					margin: auto
+				.item
+					margin-top: 22px 
+					background: #e6e6e6
+					padding: 40px 25px
+					h3
+						font-size: 14px
+						text-align: center
+						font-family: $gothambold
+					.cost
+						font-family: $gothambold
+						font-size: 24px 
+						color: #0380b3
+						text-align: center
+						padding: 30px 0 20px
+						i
+							position: relative
+							top: 2px
+							left: 5px
+					.description
+						font-family: $gothamregular
+						font-size: 13px
+	.complex
+		width: 700px
+		margin: auto
+		padding: 90px 0 40px
+		h2
+			font-family: $gothambold
+			font-size: 18px
+			padding-bottom: 40px
+			text-align: center
+		p
+			font-family: $gothamregular
+			font-size: 18px
+			padding-bottom: 20px
+		.price
+			margin-left: auto
+			p
+				text-align: right
+	form
+		flex-direction: column
+		p
+			font-size: 18px
+			font-family: "RobotoMedium"
+			color: #0380b3
+			margin: auto
+			padding-bottom: 45px
+		input[type="text"]
+			background-color: rgba(255, 255, 255, 0.5)
+			border: 1px solid #999
+			border-radius: 10px
+			margin: auto
+			width: 220px
+			padding: 10px
+		input[type="submit"]
+			background: $light-blue
+			border-radius: 21px
+			box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3), inset 0 -5px 0 rgba(3, 128, 179, 0.78)
+			font-size: 16px
+			font-weight: 400
+			padding: 10px 16px 12px 16px
+			color: #fff
+			font-family: $gothamregular
+			width: 220px
+			border: 0px solid
+			&:active
+				color: #fff
+				text-decoration: none
+				transition: all 0.5s
+				top: 1px
+				position: relative
+			&:hover, &:focus
+				color: #fff
+				text-decoration: none
+				background: #1194ca
+section.guarantee
+	background: url('/assets/img/guarantee-bg.png') no-repeat
+	height: 500px
+	background-size: cover
+	background-position: 50% 50%
+	h1
+		color: #fff
+		text-align: center
+		padding: 70px 0 60px
+	div.block
+		width: 33% 
+		div.img
+			height: 150px
+			img
+				margin: auto
+		p
+			color: #fff
+			font-size: 18px
+			font-family: $gothambold
+			line-height: 1.5
+			text-align: center
+	.first
+		top: 30px
+		right: -58px
+		width: 232px
+		bottom: initial
+		left: initial
+		&::after
+			top: initial
+			right: initial
+			bottom: 100%
+			left: 68.5%
+			border-color: transparent transparent white transparent
+	.second
+		top: 30px
+		right: -43px
+		width: 376px
+		bottom: initial
+		left: initial
+		&::after
+			top: initial
+			right: initial
+			bottom: 100%
+			left: 84.5%
+			border-color: transparent transparent white transparent
+	.third
+		top: 30px
+		right: -43px
+		width: 376px
+		bottom: initial
+		left: initial
+		&::after
+			top: initial
+			right: initial
+			bottom: 100%
+			left: 84.5%
+			border-color: transparent transparent white transparent
+section.accompaniment
+	background: #e6e6e6
+	padding-top: 90px
+	padding-bottom: 30px
+	h1, p
+		text-align: center
+		font-family: $gothambold
+	p
+		font-size: 24px
+		padding-bottom: 40px
+	.row
+		flex-wrap: wrap
+		justify-content: space-around
+		.block
+			background: #fff
+			width: 220px
+			margin: 10px auto
+			padding: 10px 5px
+			.img
+				height: 100px
+				img
+					margin: auto
+			h3, p
+				font-size: 16px
+				text-align: center
+			h3
+				font-family: $gothambold
+				margin-bottom: 5px
+			p 
+				font-family: $roboto
+				line-height: 1.2
+section.specialist
+	.wrapper
+		flex-direction: column
+		h1
+			font-size: 40px
+			text-align: center
+			padding: 50px 0
+		.block
+			width: 940px
+			border: 2px solid $blue
+			margin: auto
+			.block-item
+				width: 50%
+			h2
+				font-size: 24px
+				font-family: $gothambold
+				padding: 25px 40px
+			p
+				padding: 5px 40px
+				font-family: $gothambold
+			span
+				font-family: $gothamregular
+			.photo
+				flex-direction: column
+				background: #e6e6e6
+				img
+					margin: auto
+				.flex
+					margin: auto
+					position: relative
+					bottom: 40px
+					a
+						margin: auto
+			.image
+				padding: 15px 40px
+				img
+					width: 63px
+					height: 90px
+					margin: 0 10px
+					box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.2)
+		.block-first:after
+			content: ""
+			position: absolute
+			left: 55px
+			bottom: -30px
+			border: 10px solid transparent
+			border-top: 20px solid $blue
+			z-index: 100
+		.block-second:after
+			content: ""
+			position: absolute
+			left: 194px
+			bottom: -30px
+			border: 10px solid transparent
+			border-top: 20px solid $blue
+		.block-third:after
+			content: ""
+			position: absolute
+			left: 333px
+			bottom: -30px
+			border: 10px solid transparent
+			border-top: 20px solid $blue
+		.block-fourth:after
+			content: ""
+			position: absolute
+			left: 470px
+			bottom: -30px
+			border: 10px solid transparent
+			border-top: 20px solid $blue
+		.block-fifth:after
+			content: ""
+			position: absolute
+			left: 607px
+			bottom: -30px
+			border: 10px solid transparent
+			border-top: 20px solid $blue
+		.block-sixth:after
+			content: ""
+			position: absolute
+			left: 743px
+			bottom: -30px
+			border: 10px solid transparent
+			border-top: 20px solid $blue
+		.block-seventh:after
+			content: ""
+			position: absolute
+			left: 880px
+			bottom: -30px
+			border: 10px solid transparent
+			border-top: 20px solid $blue
+		ul
+			z-index: 1
+			position: relative
+			justify-content: space-around
+			padding: 40px 0
+		.carousel-inner
+			overflow: visible
+section.rates
+	background: #e6e6e6
+	padding-bottom: 30px
+	h1
+		text-align: center
+		padding: 70px 0
+		font-size: 36px
+	.white-block
+		background: #fff
+		width: 960px
+		height: 270px
+		box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3)
+		border-radius: 2px
+		table
+			width: 940px
+			margin: auto
+			tr
+				th
+					height: 45px
+					text-align: center
+					vertical-align: middle
+					font-family: $gothambold
+					width: 220px
+				th.blue
+					color: $blue
+				th
+					border-bottom: 2px solid #ccccc2
+				th:nth-child(2n), th:nth-child(3)
+					border-left: 2px solid #cccccc
+			tr:first-child
+				background: #fff
+			tr:nth-child(2n)
+				background: #ededed
+			tr:nth-child(3)
+				background: #f2f2f2
+			i.icon-ruble
+				font-size: 25px
+				position: relative
+				top: 6px
+				left: 6px
+			span.question-mark
+				background-color: #ccc
+				padding-top: 0px
+				.tooltiptext
+					border: 1px solid #ccc
+				.tooltiptext::after
+					border-color: #ccc transparent transparent transparent
+			.first
+				top: initial
+				right: -102px
+				width: 332px
+				bottom: 30px
+				left: initial
+				&::after
+					top: 108%
+					right: initial
+					bottom: initial
+					left: 65%
+			.second
+				top: initial
+				right: -102px
+				width: 332px
+				bottom: 30px
+				left: initial
+				&::after
+					top: 108%
+					right: initial
+					bottom: initial
+					left: 65%
+			.third
+				top: initial
+				right: -102px
+				width: 365px
+				bottom: 30px
+				left: initial
+				&::after
+					top: 105%
+					right: initial
+					bottom: initial
+					left: 68%
+	form
+		p
+			font-size: 18px
+			font-family: "RobotoMedium"
+			color: #0380b3
+			margin: auto
+			padding-bottom: 45px
+		input[type="text"]
+			background-color: rgba(255, 255, 255, 0.5)
+			border: 1px solid #999
+			border-radius: 10px
+			margin: auto
+			width: 220px
+			padding: 10px
+		input[type="submit"]
+			background: $light-blue
+			border-radius: 21px
+			box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3), inset 0 -5px 0 rgba(3, 128, 179, 0.78)
+			font-size: 16px
+			font-weight: 400
+			padding: 10px 16px 12px 16px
+			color: #fff
+			font-family: $gothamregular
+			width: 220px
+			border: 0px solid
+			&:active
+				color: #fff
+				text-decoration: none
+				transition: all 0.5s
+				top: 1px
+				position: relative
+			&:hover, &:focus
+				color: #fff
+				text-decoration: none
+				background: #1194ca
+								
+	.question
+		padding: 50px 0
+		div
+			margin: auto
+			h3, p 
+				font-family: $gothambold
+		a.order 
+			margin: auto
+section.why-us
+	background: url('/assets/img/why-us-bg.png') no-repeat
+	height: 693px
+	background-position: 50% 0%
+	h1
+		font-size: 36px
+		color: #fff
+		text-align: center
+		padding: 50px
+	.row
+		flex-wrap: wrap
+		.block
+			width: 33%
+			.img
+				height: 100px
+				img
+					margin: auto 0
+			h4, p 
+				font-size: 16px
+				color: #fff
+				width: 85%
+			h4
+				padding: 5px 0
+				font-family: $gothambold
+			p
+				font-family: $gothamregular
+				padding-bottom: 50px
+section.free-consultation
+	height: 440px
+	background: url('/assets/img/image/image.jpg') no-repeat
+	background-position: 50% 0%
+	.wrapper
+		height: 440px
+		flex-direction: column
+		h1
+			margin: 100px 0 auto auto
+			width: 50%
+			text-align: right
+			font-size: 40px
+		p
+			margin: -120px 0 auto auto
+			text-align: right
+			font-size: 16px
+			font-family: $gothamregular
+			width: 50%
+	form
+		background: rgba(41,111,184,0.90)
+		height: 110px
+		margin-top: -110px
+		background-position: 50% 0%
+		.wrapper
+			height: 110px
+			div.flex
+				width: 700px
+				margin: auto
+				input[type="text"]
+					border: 1px solid white
+					border-radius: 10px
+					background: transparent
+					padding: 10px
+					margin: auto
+					width: 220px
+				input[type="submit"]
+					background: $light-blue
+					border: 0
+					border-radius: 21px
+					box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3), inset 0 -5px 0 rgba(3, 128, 179, 0.78)
+					font-size: 16px
+					font-weight: 400
+					padding: 10px 16px 12px 16px
+					color: #fff
+					font-family: $gothamregular
+					width: 220px
+					margin-top: 19px
+					&:active
+						color: #fff
+						text-decoration: none
+						transition: all 0.5s
+						top: 1px
+						position: relative
+					&:hover, &:focus
+						color: #fff
+						text-decoration: none
+						background: #1194ca
+				span
+					display: block
+					color: #fff
+					font-size: 10px
+					padding-left: 12px
+					padding-top: 10px
+					font-family: $roboto
+				div
+					margin: auto
+section.how-working
+	background: url('/assets/img/how-work-bg.png') no-repeat
+	height: 850px
+	background-position: 50%
+	.wrapper
+		height: 850px
+		position: relative
+	h1
+		margin: auto
+	span
+		position: absolute
+		font-family: $gothamregular
+		font-size: 14px
+		text-align: center
+	span.first
+		top: 270px
+		left: 112px
+	span.second
+		top: 150px
+		left: 225px
+	span.third
+		top: 97px
+		left: 427px
+	span.fourth
+		top: 149px
+		left: 631px
+	span.fifth
+		top: 265px
+		left: 778px
+	span.sixth
+		top: 415px
+		left: 833px
+	span.seventh
+		top: 555px
+		left: 777px
+	span.eigth
+		top: 660px
+		left: 632px
+	span.ninth 
+		top: 705px
+		left: 429px
+	span.tenth 
+		top: 655px
+		left: 233px
+	span.eleventh 
+		top: 558px
+		left: 87px
+section.choose
+	background: url('/assets/img/choose-bg.png') no-repeat
+	background-size: cover
+	height: 315px
+	h1
+		font-size: 36px
+		color: #fff
+		text-align: center
+		padding: 55px 0 65px
+	span
+		font-family: $gothamregular
+	.white-circle
+		height: 100px
+		width: 100px
+		background: #fff
+		border-radius: 50%
+		margin-left: 70px
+		span:first-child
+			font-family: "RobotoRegular"
+			padding-top: 23px
+		span
+			font-family: "RobotoBold"
+			display: block
+			text-align: center
+			font-size: 18px
+			color: $light-blue
+		span:last-child
+			font-size: 32px
+	p
+		color: #fff
+		font-family: "RobotoBold"
+		font-size: 24px
+		padding-top: 22px
+		padding-left: 20px
+header.portfolio
+	height: 17px
+	background: url('/assets/img/header-portfolio-bg.jpg') no-repeat
+section.portfolio
+	background: #e6e6e6
+	padding-bottom: 30px
+	h1
+		text-align: center
+		padding: 60px 0 30px 0
+	p.desc
+		font-family: "RobotoRegular"
+		font-size: 15px
+		width: 780px
+		margin: auto
+		line-height: 1.2
+	.tab
+		margin: 23px auto 32px
+		background: $light-blue
+		border-radius: 21px
+		box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3), inset 0 -5px 0 rgba(3, 128, 179, 0.78)
+		font-size: 16px
+		font-weight: 400
+		padding: 14px 16px 18px 16px
+		color: #fff
+		font-family: $gothamregular
+		justify-content: space-between
+		width: 700px
+		a
+			color: #fff
+			font-size: 12px
+			font-family: "RobotoRegular"
+			&:active, &:hover, &:focus
+				text-decoration: none
+		.active
+			border-bottom: 1px dashed #fff
+		li:nth-child(2)
+			position: relative
+			right: 50px
+		li:nth-child(3)
+			position: relative
+			right: 50px
+	div.white-block
+		background: #fff
+		width: 940px
+		height: 550px
+		border-radius: 2px
+		box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3)
+	div.item
+		.block
+			flex-direction: column
+			width: 33%
+			img
+				margin: auto
+				width: 210px
+				height: 65px
+			div
+				margin: auto
+				flex-direction: column
+				p
+					font-family: "RobotoMedium"
+					font-size: 14px
+					text-align: center
+					padding: 0 35px
+				a
+					margin: auto
+					color: #8c681f
+					padding: 5px
+					text-align: center
+				p.glav-byx
+					color: #666666
+			div.video
+				img
+					width: 220px
+					height: 140px
+			h3
+				font-family: $gothambold
+				font-size: 20px
+				padding: 30px 0
+			ul
+				li
+					font-family: "RobotoRegular"
+					font-size: 16px
+					padding: 7px 0
+					width: 90%
+			.itogo
+				width: 661px
+				position: relative
+				right: 323px
+				top: 65px
+				p
+					font-family: "RobotoRegular"
+					padding-bottom: 20px
+			.company
+				p
+					font-family: "RobotoRegular"
+					font-size: 14px
+		.minus
+			li
+				list-style-image: url('/assets/img/minus.png')
+		.plus
+			li
+				list-style-image: url('/assets/img/plus.png')
+	#collapsePortfolioFirst, #collapsePortfolioSecond, #collapsePortfolioThird
+		.item
+			display: none
+	footer
+		justify-content: space-between
+		width: 940px
+		button.see
+			margin: 45px 0 auto
+			color: $light-blue
+			font-family: "RobotoMedium"
+			font-size: 16px
+			padding-left: 30px
+			border: 0px solid
+			background: transparent
+		div
+			margin: 40px 0 auto auto
+	.all-works
+		.item
+			background: #fff
+			box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3)
+			padding: 20px 40px
+			margin: 20px 0px
+			h2 
+				font-family: "RobotoMedium"
+				font-size: 18px
+			p.description
+				padding-bottom: 50px
+			p
+				font-family: "RobotoRegular"
+				font-size: 14px
+				line-height: 1.5
+			a
+				display: block
+			li
+				line-height: 1.5
+section.certificate
+	background: url('/assets/img/certificate-bg.png')
+	height: 490px
+	box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3)
+	background-position: 50%
+	.wrapper
+		.flex
+			height: 490px
+			width: 360px
+			margin: auto 0 auto auto
+			flex-direction: column
+	h1
+		font-size: 30px
+		color: #fff
+		margin: auto auto 0 auto
+	p
+		margin: 0 auto auto auto
+		font-family: "RobotoRegular"
+		font-size: 15px
+		color: #fff
+		padding: 20px 0
+		line-height: 1.2
+		span
+			display: block
+			padding: 20px 0
+			font-size: 12px
+section.review
+	background: #fff url('/assets/img/general.png') no-repeat
+	height: 460px
+	background-position: 100%
+	.wrapper
+		height: 460px
+		.block
+			width: 440px
+			height: 250px
+			background: #e6e6e6
+			margin: auto auto auto 100px
+			padding: 25px
+			position: relative
+			p
+				line-height: 1.3
+			p:first-child
+				padding-bottom: 30px
+				font-family: "RobotoBold"
+				font-size: 14px
+			p:last-child
+				font-size: 14px
+				font-family: "RobotoRegular"
+			button
+				background: transparent
+				border: 0px solid
+				padding: 0
+				margin: 0
+				color: $light-blue
+				i
+					color: green
+					position: relative
+					bottom: 4px
+					right: 2px
+		.block:after
+			content: ""
+			position: absolute
+			right: -64px
+			top: 152px
+			border: 20px solid transparent
+			border-left: 50px solid #e6e6e6
+			transform: skewY(-30deg)
+section.our-team
+	background: #e6e6e6
+	padding-bottom: 70px
+	h1 
+		font-size: 36px
+		text-align: center
+		padding: 50px 0 40px
+	i
+		font-size: 28px
+		position: relative
+		top: 12px
+	i.icon-left-arrow
+		right: 1px
+	i.icon-right-arrow
+		left: 1px
+section.faq
+	h1
+		font-size: 36px
+		text-align: center
+		padding: 45px 0 30px
+	div.panel-body
+		width: 100%
+		a
+			color: $light-blue
+	div.panel-group
+		margin-bottom: 100px
+	h4
+		font-family: $gothambold
+		padding-left: 0px
+		border-radius: 2px
+		padding-top: 40px
+		a
+			border-bottom: 1px dashed #000
+			text-decoration: none
+			&:hover
+				color: $light-blue
+				border-bottom: 0px dashed #000
+	ul
+		list-style: disc
+		padding: 20px
+	p
+		padding: 10px 0
+	.panel-body
+		background: #e6e6e6
+		padding: 20px
+		margin: 10px 0px
+		font-family: "RobotoRegular"
+		line-height: 1.2
+		font-size: 16px
+		width: 740px
+section.contact
+	position: relative
+	.block
+		background: url('/assets/img/contact-us-bg.png')
+		height: 400px
+		background-position: 30%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 100
+		margin: auto
+		width: 650px
+	.wrapper
+		width: 330px
+	h2 
+		font-family: $gothambold
+		font-size: 24px
+		padding-top: 60px
+	p.ooo
+		font-family: $gothambold
+		font-size: 16px
+		padding: 45px 0 20px 0
+	div.flex
+		justify-content: space-between
+		padding: 5px 0
+		p
+			font-size: 16px
+			font-family: "RobotoRegular"
+		p:last-child
+			font-family: "RobotoBold"
+			text-align: right
+		a
+			color: #000
+			text-decoration: underline
+	div.adress
+		padding-bottom: 10px
+section.question
+	background: url('/assets/img/question-bg.png') no-repeat
+	height: 417px
+	background-position: 50%
+	position: relative
+	.flex
+		height: 417px
+		h1
+			color: #fff
+			font-size: 60px
+			padding-top: 60px
+		p
+			font-family: "RobotoRegular"
+			font-size: 18px
+			color: #fff
+			padding-top: 32px
+			width: 62%
+			line-height: 1.4
+		span.guarantee
+			position: absolute
+			bottom: 20px
+			color: #fff
+		img.line
+			position: relative
+			bottom: 25px
+			left: 300px
+		form
+			width: 280px
+			margin: auto
+			input[type="text"], textarea, button
+				border: 1px solid white
+				border-radius: 10px
+				background: transparent
+				padding: 10px
+				margin: auto
+				width: 280px
+				display: block
+				margin: 5px 0
+			textarea
+				height: 90px
+				margin-top: -35px
+			input[type="submit"]
+				background: $light-blue
+				border: 0
+				border-radius: 21px
+				box-shadow: 0 10px 22.6px 1.4px rgba(0, 0, 0, 0.3), inset 0 -5px 0 rgba(3, 128, 179, 0.78)
+				font-size: 16px
+				font-weight: 400
+				padding: 10px 16px 12px 16px
+				color: #fff
+				font-family: $gothamregular
+				width: 280px
+				&:active
+					color: #fff
+					text-decoration: none
+					transition: all 0.5s
+					top: 1px
+					position: relative
+				&:hover, &:focus
+					color: #fff
+					text-decoration: none
+					background: #1194ca
+			input[type="file"]
+				position: absolute
+				left: 0
+				top: 185px
+				width: 100%
+				height: 10%
+				letter-spacing: 10em 
+				-ms-transform: scale(20)
+				opacity: 0
+				cursor: pointer
+			button
+				height: 37px
+			a.button
+				display: block
+				position: relative
+				color: #fff
+				bottom: 41px
+				border-radius: 10px
+				left: 179px
+				width: 100px
+				height: 35px
+				background-image: linear-gradient(to top, #0380b3 0%, #0380b3 20%, #01a8ec 81%, #01a8ec 100%)
+				span
+					position: relative
+					top: 8px
+					left: 27px
+footer
+	height: 135px
+	.wrapper
+		height: 135px
+		justify-content: space-between
+		div
+			margin: auto 0
+	p, a
+		font-size: 14px
+		font-family: "RobotoRegular"
+	div.email
+		p
+			text-align: center
+	div.company
+		text-align: right
+.director
+	.flex
+		flex-wrap: wrap
+	p
+		padding-bottom: 10px
+	.description
+		padding-top: 40px
+		width: 40%
+	.image
+		width: 40%
+		margin-left: auto
+		img
+			width: 100%
+
+
+//Carousel Fade
+.carousel-fade
+	.carousel-inner
+		.item
+			-webkit-transition-property: opacity
+			transition-property: opacity
+			opacity: 0
+		.active
+			&.left, &.right
+				opacity: 0
+			opacity: 1
+		.next.left, .prev.right
+			opacity: 1
+		.next, .prev
+			left: 0
+			-webkit-transform: translate3d(0, 0, 0)
+			transform: translate3d(0, 0, 0)
+		.active
+			&.left, &.right
+				left: 0
+				-webkit-transform: translate3d(0, 0, 0)
+				transform: translate3d(0, 0, 0)
+	.carousel-control
+		z-index: 2
+.carousel-inner
+	height: 100%
+	width: 700px
+	margin: auto
+	.item
+		height: 100%
+
+.carousel-control
+	background-image: none !important
+	top: 50%
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	background-color: #80a0d0
+	img
+		position: relative
+		top: 7px
+		right: 2px
+		width: 35px
+.carousel-team
+	.carousel-inner
+		height: 100%
+		width: 100% !important
+		margin: auto
+		.item
+			height: 100%
+@media only screen and (max-width: 960px)
+	section, header, body
+		width: 960px
+	.wrapper
+		padding: 0 20px
+	section.rates
+		.white-block
+			width: 920px
+			table
+				width: 900px
+.form-specialist
+	width: 600px
+	height: 115px
+	form
+		flex-direction: column
+		p
+			font-size: 18px
+			font-family: "RobotoMedium"
+			color: #0380b3
+			margin: auto
+			padding-bottom: 45px
+		input[type="text"]
+			background-color: rgba(255, 255, 255, 0.5)
+			border: 1px solid #000
+			border-radius: 10px
+			margin: auto
+			width: 180px
+			padding: 10px
+		input[type="submit"]
+			margin: 20px auto
+			background: $light-blue
+			border-radius: 21px
+			box-shadow: 0 2px 15.6px 1.4px rgba(0, 0, 0, 0.3), inset 0 -2px 0 rgba(3, 128, 179, 0.78)
+			font-size: 16px
+			font-weight: 400
+			padding: 10px 16px 12px 16px
+			color: #fff
+			font-family: $gothamregular
+			width: 220px
+			border: 0px solid
+			&:active
+				color: #fff
+				text-decoration: none
+				transition: all 0.5s
+				top: 1px
+				position: relative
+			&:hover, &:focus
+				color: #fff
+				text-decoration: none
+				background: #1194ca
